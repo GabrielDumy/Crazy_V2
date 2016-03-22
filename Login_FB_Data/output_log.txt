@@ -1,0 +1,80 @@
+Initialize engine version: 5.2.3f1 (f3d16a1fa2dd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.0]
+    Renderer: NVIDIA GeForce 8400 GS (Microsoft Corporation - WDDM v1.1) (ID=0x6e4)
+    Vendor:   NVIDIA
+    VRAM:     497 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Gaby\Desktop\Crazy_V2\Login_FB_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Gaby\Desktop\Crazy_V2\Login_FB_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Gaby\Desktop\Crazy_V2\Login_FB_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Gaby\Desktop\Crazy_V2\Login_FB_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Gaby\Desktop\Crazy_V2\Login_FB_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Gaby\Desktop\Crazy_V2\Login_FB_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Gaby\Desktop\Crazy_V2\Login_FB_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Gaby\Desktop\Crazy_V2\Login_FB_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Gaby\Desktop\Crazy_V2\Login_FB_Data\Managed\LitJson.dll (this message is harmless)
+Loading C:\Users\Gaby\Desktop\Crazy_V2\Login_FB_Data\Managed\LitJson.dll into Unity Child Domain
+Platform assembly: C:\Users\Gaby\Desktop\Crazy_V2\Login_FB_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.064 seconds
+desktop: 1440x900 60Hz; virtual: 2806x900 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: C:\Users\Gaby\Desktop\Crazy_V2\Login_FB_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 176c -> priority: 1 
+  Thread -> id: 166c -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.770145 ms
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 276.
+Total: 0.428651 ms (FindLiveObjects: 0.058104 ms CreateObjectMapping: 0.046382 ms MarkObjects: 0.307599 ms  DeleteObjects: 0.014781 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.533902 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 276.
+Total: 0.411576 ms (FindLiveObjects: 0.029817 ms CreateObjectMapping: 0.038481 ms MarkObjects: 0.327222 ms  DeleteObjects: 0.014271 ms)
+
+NullReferenceException: Facebook object is not yet loaded.  Did you call FB.Init()?
+  at Facebook.Unity.FB.get_FacebookImpl () [0x00000] in <filename unknown>:0 
+  at Facebook.Unity.FB+Mobile.get_MobileFacebookImpl () [0x00000] in <filename unknown>:0 
+  at Facebook.Unity.FB+Mobile.RefreshCurrentAccessToken (Facebook.Unity.FacebookDelegate`1 callback) [0x00000] in <filename unknown>:0 
+  at Facebook.Unity.Example.AccessTokenMenu.GetGui () [0x00000] in <filename unknown>:0 
+  at Facebook.Unity.Example.MenuBase.OnGUI () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Facebook object is not yet loaded.  Did you call FB.Init()?
+  at Facebook.Unity.FB.get_FacebookImpl () [0x00000] in <filename unknown>:0 
+  at Facebook.Unity.FB+Mobile.get_MobileFacebookImpl () [0x00000] in <filename unknown>:0 
+  at Facebook.Unity.FB+Mobile.RefreshCurrentAccessToken (Facebook.Unity.FacebookDelegate`1 callback) [0x00000] in <filename unknown>:0 
+  at Facebook.Unity.Example.AccessTokenMenu.GetGui () [0x00000] in <filename unknown>:0 
+  at Facebook.Unity.Example.MenuBase.OnGUI () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.559897 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 276.
+Total: 0.472994 ms (FindLiveObjects: 0.033130 ms CreateObjectMapping: 0.050714 ms MarkObjects: 0.373859 ms  DeleteObjects: 0.013761 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.547154 ms
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 276.
+Total: 0.464584 ms (FindLiveObjects: 0.031855 ms CreateObjectMapping: 0.039246 ms MarkObjects: 0.377427 ms  DeleteObjects: 0.014781 ms)
+
+NullReferenceException: Facebook object is not yet loaded.  Did you call FB.Init()?
+  at Facebook.Unity.FB.get_FacebookImpl () [0x00000] in <filename unknown>:0 
+  at Facebook.Unity.FB+Mobile.get_MobileFacebookImpl () [0x00000] in <filename unknown>:0 
+  at Facebook.Unity.FB+Mobile.RefreshCurrentAccessToken (Facebook.Unity.FacebookDelegate`1 callback) [0x00000] in <filename unknown>:0 
+  at Facebook.Unity.Example.AccessTokenMenu.GetGui () [0x00000] in <filename unknown>:0 
+  at Facebook.Unity.Example.MenuBase.OnGUI () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
