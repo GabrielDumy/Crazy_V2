@@ -9,12 +9,12 @@ using System.IO;
 
 public class Register : MonoBehaviour {
 
-	public GameObject nickname;
-	public GameObject email;
-	public GameObject password;
-	public GameObject confPassword;
-	public GameObject name;
-	public GameObject lastname;
+	public GameObject nickname_form;
+	public GameObject email_form;
+	public GameObject password_form;
+	public GameObject confPassword_form;
+	public GameObject name_form;
+	public GameObject lastname_form;
 	
 	private static string Nickname;
 	private static string Email;
@@ -28,7 +28,6 @@ public class Register : MonoBehaviour {
 
 	JsonData json;
 
-	public User user = new User (new BasicUser("Dumy","Gaby","Dumitru","yo_hayduk@yahoo.es","","","gaby"));
 	// Use this for initialization
 	void Start () {
 
@@ -36,23 +35,38 @@ public class Register : MonoBehaviour {
 
 	public void RegisterButton()
 	{
-		PostData ();
+		if (Nickname != "" && Name != "" && LastName != "" && Email != "") 
+		{
+
+			if(Password==ConfPassword)
+			{
+				PostData ();
+			}else{
+				Debug.Log ("La contraseña no coincide");
+			}
+
+		} else {
+			Debug.Log("Todos los campos deben ser rellenados");
+		}
+
+
+
 	}
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Tab)) 
 		{
-			if(nickname.GetComponent<InputField>().isFocused)
+			if(nickname_form.GetComponent<InputField>().isFocused)
 			{
-				email.GetComponent<InputField>().Select();
+				email_form.GetComponent<InputField>().Select();
 			}
-			if(email.GetComponent<InputField>().isFocused)
+			if(email_form.GetComponent<InputField>().isFocused)
 			{
-				password.GetComponent<InputField>().Select();
+				password_form.GetComponent<InputField>().Select();
 			}
-			if(password.GetComponent<InputField>().isFocused)
+			if(password_form.GetComponent<InputField>().isFocused)
 			{
-				confPassword.GetComponent<InputField>().Select();
+				confPassword_form.GetComponent<InputField>().Select();
 			}
 		}
 		if (Input.GetKeyDown (KeyCode.Return)) 
@@ -61,16 +75,18 @@ public class Register : MonoBehaviour {
 				RegisterButton();
 		}
 
-		Nickname = nickname.GetComponent<InputField>().text;
-		Email = email.GetComponent<InputField>().text;
-		Password = password.GetComponent<InputField>().text;
-		ConfPassword = confPassword.GetComponent<InputField>().text;
-		Name = name.GetComponent<InputField>().text;
-		LastName = lastname.GetComponent<InputField>().text;
+		Nickname = nickname_form.GetComponent<InputField>().text;
+		Email = email_form.GetComponent<InputField>().text;
+		Password = password_form.GetComponent<InputField>().text;
+		ConfPassword = confPassword_form.GetComponent<InputField>().text;
+		Name = name_form.GetComponent<InputField>().text;
+		LastName = lastname_form.GetComponent<InputField>().text;
 
 	}
 
 	void PostData(){
+
+		User user = new User (new BasicUser(Nickname,Name,LastName,Email,"","",Password));
 
 		string postURL = "http://api.estudiobox.es:3000/v1/users";
 		json = JsonMapper.ToJson (user);
@@ -79,19 +95,15 @@ public class Register : MonoBehaviour {
 
 		Debug.Log (jsonString);
 
-		var encoding = new System.Text.UTF8Encoding();
-
-		/*Hashtable postHeader = new Hashtable();*/
-
 		Dictionary<string, string> dict = new Dictionary<string, string>();
 
-		dict.Add("Content-Type", "text/json");
+		dict.Add("Content-Type", "application/json");
 
-		byte[] body = encoding.GetBytes (jsonString);
+		byte[] body =System.Text.Encoding.UTF8.GetBytes(jsonString);
 		
 		WWW www = new WWW(postURL,body,dict);
 
-		StartCoroutine ("PostDataEnumerator",www);
+		StartCoroutine (PostDataEnumerator(www));
 	}
 
 	IEnumerator PostDataEnumerator(WWW www)
@@ -104,7 +116,8 @@ public class Register : MonoBehaviour {
 			}
 			else
 			{
-				Debug.Log(www.error);
+				Debug.Log( www.error);
+				Debug.Log(www.text);
 			}
 		}
 

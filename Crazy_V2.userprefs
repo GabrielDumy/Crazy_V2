@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\FBHolder.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FB_Login.cs">
     <Files>
-      <File FileName="Assets\FBHolder.cs" Line="11" Column="1" />
+      <File FileName="Assets\Scripts\FB_Login.cs" Line="89" Column="37" />
+      <File FileName="Assets\Scripts\Login.cs" Line="89" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

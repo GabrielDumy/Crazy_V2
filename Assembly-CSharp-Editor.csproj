@@ -74,7 +74,7 @@
  <HintPath>G:/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
  </Reference>
  <Reference Include="LitJson">
- <HintPath>C:/Users/Gaby/Desktop/Crazy_V2/Assets/plugins/LitJson.dll</HintPath>
+ <HintPath>C:/Users/Gaby/Documents/GitHub/Crazy_V2/Assets/plugins/LitJson.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>G:/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -115,6 +115,10 @@
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>G:/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{0524E51F-92B2-01DA-63D3-C2901B16B1BD}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
